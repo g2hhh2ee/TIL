@@ -17,6 +17,8 @@
 - subtraction 뺄셈
 
 ## NaN
+![nan](https://user-images.githubusercontent.com/57996351/172012253-26e2c0fd-500b-4f0d-9f1a-1f21428919b0.PNG)
+
 
 - is a numeric value that represents something that is… not a number
 - 자바스크립트에서 Number로 분류된다.
