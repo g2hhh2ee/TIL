@@ -101,7 +101,7 @@ undefined;
 
 ```js
 //Single or Double quotes OK
-"hello world";
+'hello world';
 "hello world";
 
 //Concatenation
