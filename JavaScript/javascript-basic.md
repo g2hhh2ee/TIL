@@ -137,7 +137,64 @@ undefined;
 "hello".length % "hi\\".length; //5 % 3 = 2
 ```
 
+
 ## Define and Reference Javascript | VAR
+
+- Variables are like labels for values
+- we can sftore a value and give it a name so that we can:
+- refer back to it later
+- use that value to do…stuff
+- or change it later one
+
+### EXERCISE
+
+```jsx
+//1,2.
+let myLuckyNumber = 37;
+let octopusLimbs = 8;
+```
+
+## Updating Variables
+
+```jsx
+// Updating Variables
+let score = 0;
+console.log(score);
+
+// new line
+score = 5;
+console.log(score);
+
+// new line
+score = score + 5;
+console.log(score);
+
+// new line
+score = score + 5;
+console.log(score);
+
+// new line
+score = score + 5;
+console.log(score);
+
+// new line
+score = score + 5;
+console.log(score);
+
+// new line - shorter syntax
+score += 5;
+console.log(score);
+
+// new line
+score *= 5;
+console.log(score);
+
+// new line
+score -= 5;
+console.log(score);
+
+// Remember that ++ increments by one and -- decrements by one
+```
 
 ## VARIABLES | OLDER WAY
 
@@ -147,13 +204,13 @@ undefined;
 var yourVariableName = yourValue;
 
 //They can store all of the values we've seen
-var name = "Rusty";
+var name = "Alice";
 var secretNumber = 73;
 var isAdorable = true;
 
 //Recall the stored value by calling the variable name
-var name = "Rusty";
-"hello there " + name; //"hello there Rusty"
+var name = "Alice";
+"hello there " + name; //"hello there Alice"
 
 var num = 37;
 num + 3 + 10; //50
