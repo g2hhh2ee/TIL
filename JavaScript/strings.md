@@ -12,7 +12,7 @@ Important
 
 - Random Numbers and the Object
 
-## Intro Strings
+## 1. Intro Strings
 
 **Primitive Types**
 
