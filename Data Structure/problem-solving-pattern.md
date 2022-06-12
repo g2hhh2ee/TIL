@@ -15,7 +15,7 @@
 
 
 
-### 1️⃣ Frequency Counter
+### 1️⃣ Frequency Counter 빈도수 세기
 많은 값을 수집하기 위해 일반적으로 JavaScript에서 Object를 사용한다.
 
 - uses objects or sets to collect values/frequencies of values.
