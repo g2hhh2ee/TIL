@@ -177,3 +177,103 @@ annoyingLaugh.replace("teehee", "haa"); // 'haha so funny! teehee'
 // repeat
 console.log("lol".repeat(10));
 ```
+
+## 5. String Template Literals
+
+- 완전 유용함
+- strings that allow embedded expressions, which will be evaluated and then turned into a resulting string
+- 임베디드 표현식.
+- 문자열 내부에 표현식을 포함할 수 있는 문자열을 생성할 수 있게 하고 해당 표현식 문자열로 바꾼다.
+- use **BACK-TICKS**! not single-quotes.
+- `template literal` ``
+
+```jsx
+// String template literals
+console.log(`hello ${1 + 2 + 0}`);
+```
+
+## 6. Undefined & Null
+
+- Both primitive values
+- Null
+  - intentional absence of any value.
+  - **must be assigned.**
+  - It's something we set.
+- Undefined
+  - variables that do not have an assigned value.
+  - something is not there. Something we **DON'T** assign ourselves!!
+
+```jsx
+// Undefined v Null
+// Both primitive values
+
+// Null - intentional absence of any value. Null must be assigned.
+// It's something we set
+
+// Undefined - variables that do not have an assigned value are undefined.
+// Undefined is something is not there. Something we DON'T assign ourselves
+
+console.log("hello".indexOf[99]); // undefined
+// undefined is JS way to say IDK
+
+// Null is intentional lack of value. Concept of nothing.
+
+let loggedInUser = null;
+console.log(loggedInUser); // null
+
+loggedInUser = "Bill Gates";
+
+console.log(loggedInUser);
+```
+
+## 7. Random Numbers and the Math Object
+
+- Math Object
+  - contains properties and methods for mathematical constants and functions
+  - object - collection of properties and methods
+  - `PI, round, abs, floor, ceil, random` 등.
+- Random Numbers
+  - `Math.random()`
+  - gives us a random decimal between 0 and 1 (non-inclusive)
+  - 1포함하지 않는다.
+- Random Integers
+  - how to generate random between 1 and 10?
+  - multiply 10 + 1
+- remember that and **JS object is a place to store stuff**
+
+```jsx
+// Math Object
+// object - collection of properties and methods
+// Pi is an object that we always have access to
+
+console.log(Math.PI);
+console.log(Math.E);
+
+// Math.floor will take a number and chop off the decimals
+console.log(Math.floor(23.443));
+console.log(Math.floor(23.9999));
+
+// Math.ceil will round it up
+console.log(Math.ceil(23.1)); //24
+console.log(Math.ceil(23.01)); //24
+
+// Math.random will give you a random number between 0 and 1
+console.log(Math.random());
+console.log(Math.random());
+
+// Math.random
+console.log(Math.floor(Math.random() * 12));
+console.log(Math.floor(Math.random() * 12) + 1);
+console.log(Math.floor(Math.random() * 12) + 1);
+console.log(Math.floor(Math.random() * 12) + 1);
+
+// Math.random - if you want to go between two numbers
+console.log(Math.floor(Math.random() * 3) + 20);
+
+// Math.pow - Power object
+console.log(Math.pow(2, 3)); // 8
+//or
+console.log(2 ** 3); // 8
+
+// remember that and JS object is a place to store stuff
+```
