@@ -70,12 +70,18 @@ movieLine; // ["oliver", "eva"];
 // unshift
 movieLine.unshift("VIP"); // 3
 movieLine; // ["VIP", "oliver", "eva"];
+
+// Excercise
+const planets = ['The Moon','Venus', 'Earth', 'Mars', 'Jupiter'];
+planets.shift();
+planets.push("Saturn");
+planets.unshift("Mercury");
 ```
 
-- concat : 두 개의 배열을 이어붙인다.
-- includes : 배열에 특정 값이 포함되어 있는지 알려준다.
-- indexOf : 배열에 특정 값의 인덱스를 알려 준다.
-- reverse : 원본 배열의 값들의 인덱스를 거꾸로 바꾼다.
+- `concat` : 두 개의 배열을 이어붙인다.→ 두 배열 이어서 세 번째 배열 만듦.
+- `includes` : 배열에 특정 값이 포함되어 있는지 알려준다. → returns true or false(boolean값 반환)
+- `indexOf` : 배열에 특정 값의 인덱스를 알려 준다.
+- `reverse` : 원본 배열의 값들의 인덱스를 거꾸로 바꾼다.
     - 첫 번째 배열 값을 마지막으로, 마지막 배열 값을 첫 번째로 바꾼다.
 
 ```jsx
@@ -89,6 +95,9 @@ cats.includes("blue"); // true;
 
 // indexOf
 dogs.indexOf("wyatt"); // 1
+dogs.indexOf("0"); // -1 없으면 -1 반환.
+// 같은 것 중복해서 들어가있으면 첫 번째 인덱스를 반환. ('blue' 둘이면 첫 번째 'blue'의 인덱스 반환.
+
 
 // reverse
 cats.reverse(); // ['kitty', 'blue'];
