@@ -18,7 +18,12 @@ let lottoNums = [19, 22, 56, 12, 51];
 let stuff = [true, 68, "cat", null];
 stuff[2]; // 68
 stuff[2][1]; // 8 - 첫번째는 인덱스, 두번째는 요소의 자릿수
+let days = ["Mon", "Tue", "Wed"];
+days[2][0] = "W"
 ```
+**인덱스는 배열의 요소가 위치한 자릿수이고, 문자열과 마찬가지로 0부터 시작한다.** 
+
+Each element has a corresponding index. (counting starts at 0)
 
 인덱스는 배열의 요소가 위치한 자릿수이고, 문자열과 마찬가지로 0부터 시작한다. 
 
@@ -28,6 +33,8 @@ stuff[2][1]; // 8 - 첫번째는 인덱스, 두번째는 요소의 자릿수
 let colors = ["red", "orange", "yellow"];
 colors[2] = "green";
 colors; // ['red', 'orange', 'green'];
+colors[5] = "gray";
+colors; // ['red', 'orange', 'green', empty*2, 'gray'];
 ```
 
 배열은 문자열과 달리 요소 값을 바꿀 수 있다.
