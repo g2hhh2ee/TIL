@@ -41,10 +41,10 @@ colors; // ['red', 'orange', 'green', empty*2, 'gray'];
 
 ## **배열의 내장 객체**
 
-- push : 배열의 끝에 요소를 추가한다. add to **end**
-- pop : 배열의 끝의 요소를 제거한다. remove from **end → 맨 끝 요소 반환함.**
-- shift : 배열의 첫 번째 요소를 제거한다. remove from **start**
-- unshift : 배열의 첫 번째 요소를 추가한다.add to **start**
+- `push` : 배열의 끝에 요소를 추가한다. add to **end**
+- `pop` : 배열의 끝의 요소를 제거한다. remove from **end → 맨 끝 요소 반환함.**
+- `shift` : 배열의 첫 번째 요소를 제거한다. remove from **start**
+- `unshift` : 배열의 첫 번째 요소를 추가한다.add to **start → 배열의 시작에 새 요소 추가함.**
 
 ```jsx
 // push
