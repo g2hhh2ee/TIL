@@ -137,20 +137,32 @@ scores.sort(); // [-12, 0, 1, 100, 2500, 34, 70, 9];
 ```
 
 ## **배열의 참조 관계**
+배열은 값을 비교하는 것이 아니라 **배열의 참조값(주소값)을 비교하는 것이기 때문에 값이 같아도 false를 반환한다.**
 
+- 배열에서 비교하는 것은 **메모리의 참조**!
+- **let numsCopy = nums; // numsCopy[]는 nums[]를 할당한 것이라 참조값을 공유한다.**
+- nums는 [1,2,3]을 가리키고 있고, numsCopy는 또다른 화살표(포인터?)로 [1,2,3]을 가리키고 있다.
+- 따라서 nums === numsCopy; // true. JavaScript 메모리에서 동일한 것을 가리키고 있다!
+- 이중 등호, 삼중 등호는 메모리에서 참조를 확인한다. 그치만 같은 배열이라면, 같은 것을 참조하고 있다면 비교가 무의미하다. → 덜중요함.
 ```jsx
-(["hi", "bye"] === ["hi", "bye"][1]) === // false
-  [1]; // false
-// 배열은 값을 비교하는 것이 아니라 배열의 참조값(주소값)을 비교하는 것이기 때문에 값이 같아도 false를 반환한다.
+'hey' === 'hey'; // true
+['hey', 'yo'] === ['hey', 'yo']; // false
+[1] === [1]; // false
+[1] == [1]; // false
+[] == []; // false
+
+// 배열은 값을 비교하는 것이 아니라 배열의 참조값(주소값)을 비교하는 것이기 때문에 
+// 값이 같아도 false를 반환한다.
 
 let nums = [1, 2, 3];
-let numsCopy = nums;
+let numsCopy = nums; // numsCopy[]는 nums[]를 할당한 것이라 참조값을 공유한다.
 nums; // [1, 2, 3];
 numsCopy; // [1, 2, 3];
-nums.push(4);
+nums.push(4); // 그래서 nums[] 에 요소를 추가하면 numsCopy[]에도 추가된다.
 nums; // [1, 2, 3, 4];
 numsCopy; //[1, 2, 3, 4];
-// numsCopy[]는 nums[]를 할당한 것이라 참조값을 공유한다. 그래서 nums[] 에 요소를 추가하면 numsCopy[]에도 추가된다.
+// numsCopy[]는 nums[]를 할당한 것이라 참조값을 공유한다. 
+// 그래서 nums[] 에 요소를 추가하면 numsCopy[]에도 추가된다.
 // numsCopy[]를 수정해도 nums[]도 같이 수정된다.
 nums === numsCopy; // true;
 ```
