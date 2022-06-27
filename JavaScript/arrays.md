@@ -202,4 +202,6 @@ const gameBoard = [
   ["O", null, "X"],
   ["O", "O", "X"],
 ];
+// null에 접근하려면
+gameBoard[1][1]; // null
 ```
