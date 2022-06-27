@@ -104,8 +104,18 @@ cats.reverse(); // ['kitty', 'blue'];
 ```
 
 - `slice`(시작점, 정지점) : 배열에서 인수로 전달된 시작점부터 정지점 앞 인덱스까지를 출력한 **복사본 배열을 반환**한다. (배열의 일부를 복사) `slice(?start, ?end)`
-- `splice`(시작점, 제거할 요소 개수, 대체할 값 ) : 기존 요소들을 제거하거나 대체하거나 새로운 요소들을 추가해서 **원본 배열의 내용을 변경**한다.
+- `splice`(시작점, 제거할 요소 개수, 대체할 값 ) : 기존 요소들을 제거하거나 대체하거나 새로운 요소들을 추가해서 **원본 배열의 내용을 변경**한다. (배열의 요소를 삽입, 삭제) `splice(start, ?deleteCount, ...items`
+    - 삭제하지 않고 삽입만 하고 싶으면 `?deleteCount = 0`
+        - splice(3, 0, ‘forestgreen’, ‘smokewhite’);
+        - colors.splice(2, 2, 'DELETED~!'); `// 2개 요소가 하나의 'DELETED~!'로 바뀜`
 - `sort` : 배열의 요소들을 정렬해준다.
+    - 빈 괄호를 사용해 배열 정렬, 모든 것을 문자열로 변환한 다음 비교할 것임.
+    - The `sort()` method sorts the elements of an array *in place* and returns the sorted array.
+    - The default sort order: ascending,
+    - built upon converting the elements into strings,
+    - then comparing their sequences of UTF-16 code units values.
+    - 숫자 배열에 sort를 사용하면 각 요소의 **앞자리수만 가지고 정렬**을 한다.⇒ 신뢰할 수 없다. (정렬과 관련된 경고임)
+    - 따라서, 정렬을 작성하고 사용자 정의된 함수를 포함하는 방법이 있다. (이건 후에 알아볼 것임. arrays.toString(), reduce, filter 등)
 
 ```jsx
 // slice
@@ -123,7 +133,7 @@ colors; //["red", "red-orange", "yellow", "green", "blue", "indigo", "violet"];
 // sort
 let scores = [1, 70, 100, 2500, 9, -12, 0, 34];
 scores.sort(); // [-12, 0, 1, 100, 2500, 34, 70, 9];
-// 그냥 배열에 sort를 사용하면 각 요소의 앞자리수만 가지고 정렬을 한다.
+// 그냥 숫자 배열에 sort를 사용하면 각 요소의 앞자리수만 가지고 정렬을 한다.
 ```
 
 ## **배열의 참조 관계**
