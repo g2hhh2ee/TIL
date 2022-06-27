@@ -168,7 +168,20 @@ nums === numsCopy; // true;
 ```
 
 ### **배열과 const**
-
+- const 변수는 재할당 불가!! ❌ (const is primitive. can’t change at all. ) can’t change reference and reassign,
+- 중요한 건, **변수 자체가 재할당되지 않는다는 것!**
+- const nums = [1, 2, 3];
+    - nums는 내용을 저장하는 게 아니고 참조를 저장한거임.
+    - 따라서 배열에 대한 참조가 변경되지 않는한!
+    - 그러니까 shell이 그대로 유지되면 내용이 변경될 수 있다.
+    - 왜? 그 어떤 것도 이 배열의 주소인 참조에 영향을 미치지 않기 때문.
+- 결론은, const 변수는 재할당 할 수 없다고 했지만,
+- `const 변수 = [];` **← 이 경우엔 변수 자체는 배열의 메모리 주소를 가리키고 있기 때문에 배열의 요소와는 상관이 없다. 따라서, 배열 내부 요소는 수정 가능! 변수가 가리키고 있는 메모리의 주소를 바꾸는 게 아니니까!**
+- 하지만 이 변수에 새로운 참조를 설정하려고 하면 Uncaught TypeError: Assignment to constant variable. 에러 발생한다.
+- const nums = [1,2,3];
+nums.push(4); // nums가 가리키고 있는 배열의 메모리 주소에는 영향 없으니까 에러 안 난다. [1,2,3,4]
+const nums = [1,2,3,4,5]; // ❌ nums 변수에 배열을 재할당하는 것임 이건.
+- 우리 눈엔 똑같이 보이지만, 할당된 메모리 주소가 다르다!!! 조심!
 ```jsx
 const nums = [1, 2, 3];
 nums.push(4);
