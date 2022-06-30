@@ -80,5 +80,5 @@ Google은 피싱이나 스캠, 간단한 비밀번호 등으로 비밀번호가 
 
 
 
-출처
+
 [One step closer to a passwordless future](https://blog.google/technology/safety-security/one-step-closer-to-a-passwordless-future/)
